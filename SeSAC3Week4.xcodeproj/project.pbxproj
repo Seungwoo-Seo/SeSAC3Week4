@@ -17,6 +17,13 @@
 		57D371A02A809733001A5029 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 57D3719F2A809733001A5029 /* SwiftyJSON */; };
 		57D371A32A80976D001A5029 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 57D371A22A80976D001A5029 /* Kingfisher */; };
 		57D371A52A809B96001A5029 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 57D371A42A809B96001A5029 /* .gitignore */; };
+		57D371A72A809C2D001A5029 /* TranslationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D371A62A809C2D001A5029 /* TranslationViewController.swift */; };
+		57D371A92A809C61001A5029 /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D371A82A809C61001A5029 /* APIKey.swift */; };
+		57D371AF2A81C4DC001A5029 /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D371AE2A81C4DC001A5029 /* WeatherViewController.swift */; };
+		57D371B12A81E7C9001A5029 /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D371B02A81E7C9001A5029 /* VideoViewController.swift */; };
+		57D371B62A8245E5001A5029 /* LotteryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D371B52A8245E5001A5029 /* LotteryViewController.swift */; };
+		57D371B82A8245F7001A5029 /* Day16.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57D371B72A8245F7001A5029 /* Day16.storyboard */; };
+		57D371BA2A825C85001A5029 /* BeerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D371B92A825C85001A5029 /* BeerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +36,13 @@
 		57D371912A809678001A5029 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		57D371932A809678001A5029 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		57D371A42A809B96001A5029 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		57D371A62A809C2D001A5029 /* TranslationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationViewController.swift; sourceTree = "<group>"; };
+		57D371A82A809C61001A5029 /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
+		57D371AE2A81C4DC001A5029 /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
+		57D371B02A81E7C9001A5029 /* VideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
+		57D371B52A8245E5001A5029 /* LotteryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LotteryViewController.swift; sourceTree = "<group>"; };
+		57D371B72A8245F7001A5029 /* Day16.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Day16.storyboard; sourceTree = "<group>"; };
+		57D371B92A825C85001A5029 /* BeerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,11 +80,9 @@
 			children = (
 				57D371992A809692001A5029 /* 수업 */,
 				57D3719A2A809698001A5029 /* 과제 */,
+				57D371A42A809B96001A5029 /* .gitignore */,
 				57D371852A809676001A5029 /* AppDelegate.swift */,
 				57D371872A809676001A5029 /* SceneDelegate.swift */,
-				57D371892A809676001A5029 /* ViewController.swift */,
-				57D371A42A809B96001A5029 /* .gitignore */,
-				57D3718B2A809676001A5029 /* Main.storyboard */,
 				57D3718E2A809678001A5029 /* Assets.xcassets */,
 				57D371902A809678001A5029 /* LaunchScreen.storyboard */,
 				57D371932A809678001A5029 /* Info.plist */,
@@ -81,6 +93,7 @@
 		57D371992A809692001A5029 /* 수업 */ = {
 			isa = PBXGroup;
 			children = (
+				57D371B22A824533001A5029 /* Day16,17 */,
 			);
 			name = "수업";
 			path = "수업";
@@ -89,9 +102,41 @@
 		57D3719A2A809698001A5029 /* 과제 */ = {
 			isa = PBXGroup;
 			children = (
+				57D371B32A824586001A5029 /* Day16 */,
+				57D371B42A82458C001A5029 /* Day17 */,
 			);
 			name = "과제";
 			path = "과제";
+			sourceTree = "<group>";
+		};
+		57D371B22A824533001A5029 /* Day16,17 */ = {
+			isa = PBXGroup;
+			children = (
+				57D371892A809676001A5029 /* ViewController.swift */,
+				57D371A62A809C2D001A5029 /* TranslationViewController.swift */,
+				57D3718B2A809676001A5029 /* Main.storyboard */,
+				57D371AE2A81C4DC001A5029 /* WeatherViewController.swift */,
+				57D371B02A81E7C9001A5029 /* VideoViewController.swift */,
+				57D371A82A809C61001A5029 /* APIKey.swift */,
+			);
+			path = "Day16,17";
+			sourceTree = "<group>";
+		};
+		57D371B32A824586001A5029 /* Day16 */ = {
+			isa = PBXGroup;
+			children = (
+				57D371B72A8245F7001A5029 /* Day16.storyboard */,
+				57D371B52A8245E5001A5029 /* LotteryViewController.swift */,
+				57D371B92A825C85001A5029 /* BeerViewController.swift */,
+			);
+			path = Day16;
+			sourceTree = "<group>";
+		};
+		57D371B42A82458C001A5029 /* Day17 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Day17;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,6 +211,7 @@
 				57D371922A809678001A5029 /* LaunchScreen.storyboard in Resources */,
 				57D3718F2A809678001A5029 /* Assets.xcassets in Resources */,
 				57D3718D2A809676001A5029 /* Main.storyboard in Resources */,
+				57D371B82A8245F7001A5029 /* Day16.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,9 +222,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57D371B62A8245E5001A5029 /* LotteryViewController.swift in Sources */,
+				57D371BA2A825C85001A5029 /* BeerViewController.swift in Sources */,
+				57D371A72A809C2D001A5029 /* TranslationViewController.swift in Sources */,
+				57D371B12A81E7C9001A5029 /* VideoViewController.swift in Sources */,
+				57D371AF2A81C4DC001A5029 /* WeatherViewController.swift in Sources */,
 				57D3718A2A809676001A5029 /* ViewController.swift in Sources */,
 				57D371862A809676001A5029 /* AppDelegate.swift in Sources */,
 				57D371882A809676001A5029 /* SceneDelegate.swift in Sources */,
+				57D371A92A809C61001A5029 /* APIKey.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
