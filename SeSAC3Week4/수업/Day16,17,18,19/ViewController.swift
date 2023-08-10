@@ -15,8 +15,11 @@ struct Movie {
 
 }
 
-class ViewController: UIViewController {
+final class ViewController: UIViewController {
+    @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var movieTableView: UITableView!
+    @IBOutlet weak var indicatorView: UIActivityIndicatorView!
+
 
     var movieList: [Movie] = []
 
@@ -26,11 +29,13 @@ class ViewController: UIViewController {
         movieTableView.rowHeight = 60
         movieTableView.delegate = self
         movieTableView.dataSource = self
-
-        fetchData()
+        indicatorView.isHidden = true
     }
 
-    func fetchData() {
+    func fetchData(data: String) {
+        indicatorView.startAnimating()
+        indicatorView.isHidden = false
+
         var components = URLComponents()
         components.scheme = "https"
         components.host = "kobis.or.kr"
@@ -67,9 +72,11 @@ class ViewController: UIViewController {
                         self.movieList.append(movie)
                     }
 
-                    DispatchQueue.main.async {
-                        self.movieTableView.reloadData()
-                    }
+
+                    self.indicatorView.stopAnimating()
+                    self.indicatorView.isHidden = true
+                    self.movieTableView.reloadData()
+
 
                 case .failure(let error):
                     print(error)
@@ -79,6 +86,13 @@ class ViewController: UIViewController {
 
 }
 
+extension ViewController: UISearchBarDelegate {
+
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        fetchData(data: searchBar.text!)
+    }
+
+}
 
 extension ViewController: UITableViewDataSource {
 

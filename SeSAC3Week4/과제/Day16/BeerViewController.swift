@@ -10,7 +10,7 @@ import SwiftyJSON
 import Kingfisher
 import UIKit
 
-struct Beer: Codable {
+struct Beer {
     let name: String
     let imageString: String
     let description: String
@@ -18,11 +18,6 @@ struct Beer: Codable {
     var imageURL: URL? {
         return URL(string: imageString)
     }
-//    enum CodingKeys: String, CodingKey {
-//        case name = "name"
-//        case imageString = "image_url"
-//        case description = "description"
-//    }
 }
 
 final class BeerViewController: UIViewController {
@@ -83,15 +78,10 @@ private extension BeerViewController {
             switch response.result {
             case .success(let value):
                 let json = JSON(value)
-//                print("JSON: \(json)")
 
                 let name = json[0]["name"].stringValue
                 let imageString = json[0]["image_url"].stringValue
                 let description = json[0]["description"].stringValue
-
-                print(name)
-                print(imageString)
-                print(description)
 
                 self?.beer = Beer(
                     name: name,

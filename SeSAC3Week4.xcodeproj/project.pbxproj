@@ -24,6 +24,7 @@
 		57D371B62A8245E5001A5029 /* LotteryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D371B52A8245E5001A5029 /* LotteryViewController.swift */; };
 		57D371B82A8245F7001A5029 /* Day16.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57D371B72A8245F7001A5029 /* Day16.storyboard */; };
 		57D371BA2A825C85001A5029 /* BeerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D371B92A825C85001A5029 /* BeerViewController.swift */; };
+		57D371C22A832329001A5029 /* VideoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D371C12A832329001A5029 /* VideoTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,8 @@
 		57D371B52A8245E5001A5029 /* LotteryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LotteryViewController.swift; sourceTree = "<group>"; };
 		57D371B72A8245F7001A5029 /* Day16.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Day16.storyboard; sourceTree = "<group>"; };
 		57D371B92A825C85001A5029 /* BeerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerViewController.swift; sourceTree = "<group>"; };
+		57D371C12A832329001A5029 /* VideoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoTableViewCell.swift; sourceTree = "<group>"; };
+		57D371D32A847BDD001A5029 /* FirstClassObject.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = FirstClassObject.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +65,7 @@
 		57D371792A809676001A5029 = {
 			isa = PBXGroup;
 			children = (
+				57D371D32A847BDD001A5029 /* FirstClassObject.playground */,
 				57D371842A809676001A5029 /* SeSAC3Week4 */,
 				57D371832A809676001A5029 /* Products */,
 			);
@@ -93,7 +97,7 @@
 		57D371992A809692001A5029 /* 수업 */ = {
 			isa = PBXGroup;
 			children = (
-				57D371B22A824533001A5029 /* Day16,17 */,
+				57D371B22A824533001A5029 /* Day16,17,18,19 */,
 			);
 			name = "수업";
 			path = "수업";
@@ -109,7 +113,7 @@
 			path = "과제";
 			sourceTree = "<group>";
 		};
-		57D371B22A824533001A5029 /* Day16,17 */ = {
+		57D371B22A824533001A5029 /* Day16,17,18,19 */ = {
 			isa = PBXGroup;
 			children = (
 				57D371892A809676001A5029 /* ViewController.swift */,
@@ -117,9 +121,10 @@
 				57D3718B2A809676001A5029 /* Main.storyboard */,
 				57D371AE2A81C4DC001A5029 /* WeatherViewController.swift */,
 				57D371B02A81E7C9001A5029 /* VideoViewController.swift */,
+				57D371C12A832329001A5029 /* VideoTableViewCell.swift */,
 				57D371A82A809C61001A5029 /* APIKey.swift */,
 			);
-			path = "Day16,17";
+			path = "Day16,17,18,19";
 			sourceTree = "<group>";
 		};
 		57D371B32A824586001A5029 /* Day16 */ = {
@@ -231,6 +236,7 @@
 				57D371862A809676001A5029 /* AppDelegate.swift in Sources */,
 				57D371882A809676001A5029 /* SceneDelegate.swift in Sources */,
 				57D371A92A809C61001A5029 /* APIKey.swift in Sources */,
+				57D371C22A832329001A5029 /* VideoTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
