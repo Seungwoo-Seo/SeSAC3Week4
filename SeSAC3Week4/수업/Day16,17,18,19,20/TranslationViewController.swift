@@ -15,8 +15,20 @@ final class TranslationViewController: UIViewController {
     @IBOutlet weak var requestButton: UIButton!
     @IBOutlet weak var translateTextView: UITextView!
 
+    let shared = UserDefaultsHelper.shared
+
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        UserDefaults.standard.set("고래밥", forKey: "nickname")
+        UserDefaults.standard.set(33, forKey: "age")
+
+        UserDefaults.standard.string(forKey: "nickname")
+        UserDefaults.standard.integer(forKey: "age")
+
+        originalTextView.text = shared.nickname
+        shared.nickname = "칙촉"
+
 
         configureHierarchy()
         translateTextView.isEditable = false
@@ -25,6 +37,12 @@ final class TranslationViewController: UIViewController {
 
     @IBAction func requestButtonClicked(_ sender: UIButton) {
         detectLanguageAPI(query: originalTextView.text)
+
+        TranslateAPIManager.shared.fetchData(
+            text: originalTextView.text ?? ""
+        ) { [weak self] (result) in
+            self?.translateTextView.text = result
+        }
     }
 
 }

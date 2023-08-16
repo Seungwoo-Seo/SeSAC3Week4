@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ysc-VB-djq">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Oi4-zj-ilc">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
@@ -143,9 +143,9 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="contentLabel" destination="nEp-ba-Dv5" id="bIK-4H-Tdy"/>
-                                            <outlet property="thumbnailImageView" destination="ygu-vM-vJP" id="9pZ-zt-tne"/>
-                                            <outlet property="titleLabel" destination="AQY-aS-H0r" id="J8k-4w-dVQ"/>
+                                            <outlet property="contentLabel" destination="nEp-ba-Dv5" id="Mr3-f0-Z20"/>
+                                            <outlet property="thumbnailImageView" destination="ygu-vM-vJP" id="efn-En-NhT"/>
+                                            <outlet property="titleLabel" destination="AQY-aS-H0r" id="A2m-sa-DeP"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -171,6 +171,60 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K7u-G3-Jcq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="130.53435114503816" y="687.32394366197184"/>
+        </scene>
+        <!--Async View Controller-->
+        <scene sceneID="mEV-kp-c4e">
+            <objects>
+                <viewController storyboardIdentifier="AsyncViewController" id="l9m-Aa-fmv" customClass="AsyncViewController" customModule="SeSAC3Week4" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NTu-hE-PSk">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Fsa-MI-CdF">
+                                <rect key="frame" x="98.333333333333329" y="78.999999999999986" width="196.33333333333337" height="196.66666666666663"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Fsa-MI-CdF" secondAttribute="height" multiplier="1:1" id="opN-dK-bwT"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="m9s-z0-yaP">
+                                <rect key="frame" x="76" y="391" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sx9-L9-lh3">
+                                <rect key="frame" x="93" y="550" width="49" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </switch>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3xr-JO-rxM">
+                                <rect key="frame" x="241" y="550" width="75" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="didTapButton:" destination="l9m-Aa-fmv" eventType="touchUpInside" id="SQz-CX-M1w"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Xw-aq-NCM">
+                                <rect key="frame" x="76" y="255" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="BHB-Za-JwW"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Fsa-MI-CdF" firstAttribute="centerX" secondItem="NTu-hE-PSk" secondAttribute="centerX" id="8Q7-Zf-4bv"/>
+                            <constraint firstItem="Fsa-MI-CdF" firstAttribute="top" secondItem="BHB-Za-JwW" secondAttribute="top" constant="20" id="Dco-wj-HpV"/>
+                            <constraint firstItem="Fsa-MI-CdF" firstAttribute="width" secondItem="NTu-hE-PSk" secondAttribute="width" multiplier="0.5" id="icK-MO-AJa"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="firstImageView" destination="Fsa-MI-CdF" id="TCC-6l-9FE"/>
+                        <outlet property="secondImageView" destination="5Xw-aq-NCM" id="NTJ-1q-bpE"/>
+                        <outlet property="thirdImageView" destination="m9s-z0-yaP" id="zr1-5z-aWZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aRC-Ck-nO0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="903" y="687"/>
         </scene>
         <!--Weather View Controller-->
         <scene sceneID="m81-mh-Gwd">

@@ -22,6 +22,7 @@ final class ViewController: UIViewController {
 
 
     var movieList: [Movie] = []
+    var result: BoxOffice?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,39 +50,44 @@ final class ViewController: UIViewController {
         AF
             .request(url, method: .get)
             .validate()
-            .responseJSON { response in
-                switch response.result {
-                case .success(let value):
-                    let json = JSON(value)
-                    print("JSON: \(json)")
-
-                    let name1 = json["boxOfficeResult"]["dailyBoxOfficeList"][0]["movieNm"].stringValue
-                    let name2 = json["boxOfficeResult"]["dailyBoxOfficeList"][1]["movieNm"].stringValue
-                    let name3 = json["boxOfficeResult"]["dailyBoxOfficeList"][2]["movieNm"].stringValue
-
-
-                    for item in json["boxOfficeResult"]["dailyBoxOfficeList"].arrayValue {
-                        let movieNm = item["movieNm"].stringValue
-                        let openDt = item["openDt"].stringValue
-
-                        let movie = Movie(
-                            title: movieNm,
-                            release: openDt
-                        )
-
-                        self.movieList.append(movie)
-                    }
-
-
-                    self.indicatorView.stopAnimating()
-                    self.indicatorView.isHidden = true
-                    self.movieTableView.reloadData()
-
-
-                case .failure(let error):
-                    print(error)
-                }
+            .responseDecodable(of: BoxOffice.self) { [weak self] (response) in
+                self?.result = response.value
             }
+
+
+//            .responseJSON { response in
+//                switch response.result {
+//                case .success(let value):
+//                    let json = JSON(value)
+//                    print("JSON: \(json)")
+//
+//                    let name1 = json["boxOfficeResult"]["dailyBoxOfficeList"][0]["movieNm"].stringValue
+//                    let name2 = json["boxOfficeResult"]["dailyBoxOfficeList"][1]["movieNm"].stringValue
+//                    let name3 = json["boxOfficeResult"]["dailyBoxOfficeList"][2]["movieNm"].stringValue
+//
+//
+//                    for item in json["boxOfficeResult"]["dailyBoxOfficeList"].arrayValue {
+//                        let movieNm = item["movieNm"].stringValue
+//                        let openDt = item["openDt"].stringValue
+//
+//                        let movie = Movie(
+//                            title: movieNm,
+//                            release: openDt
+//                        )
+//
+//                        self.movieList.append(movie)
+//                    }
+//
+//
+//                    self.indicatorView.stopAnimating()
+//                    self.indicatorView.isHidden = true
+//                    self.movieTableView.reloadData()
+//
+//
+//                case .failure(let error):
+//                    print(error)
+//                }
+//            }
     }
 
 }
@@ -100,7 +106,8 @@ extension ViewController: UITableViewDataSource {
         _ tableView: UITableView,
         numberOfRowsInSection section: Int
     ) -> Int {
-        return movieList.count
+//        return movieList.count
+        return result?.boxOfficeResult.dailyBoxOfficeList.count ?? 0
     }
 
     func tableView(
@@ -114,6 +121,10 @@ extension ViewController: UITableViewDataSource {
 
         cell.textLabel?.text = movieList[indexPath.row].title
         cell.detailTextLabel?.text = movieList[indexPath.row].release
+
+//        let boxOffice = result?.boxOfficeResult.dailyBoxOfficeList[indexPath.row]
+
+
 
         return cell
     }

@@ -8,15 +8,12 @@
 import UIKit
 
 final class VideoTableViewCell: UITableViewCell {
-    static let identifier = "VideoTableViewCell"
-
     @IBOutlet weak var thumbnailImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var contentLabel: UILabel!
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    override func layoutSubviews() {
+        super.layoutSubviews()
         titleLabel.font = .boldSystemFont(ofSize: 15)
         titleLabel.numberOfLines = 0
         contentLabel.font = .systemFont(ofSize: 13)
@@ -24,6 +21,9 @@ final class VideoTableViewCell: UITableViewCell {
         thumbnailImageView.contentMode = .scaleToFill
     }
 
-
+    func configure(video: Video) {
+        titleLabel.text = video.title
+        contentLabel.text = video.contents
+    }
 
 }
