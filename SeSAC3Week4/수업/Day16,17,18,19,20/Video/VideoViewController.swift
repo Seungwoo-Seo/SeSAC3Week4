@@ -31,22 +31,6 @@ final class VideoViewController: UIViewController {
         tableView.rowHeight = 140
     }
 
-    // invalidURL(url: "https://dapi.kakao.com/v2/search/vclip?query=수박")
-    // url에서 한글 처리를 해줘야함 앙ㄴ그러면 이렇게 댐
-    // 인섬니아는 알아서 처리를 해둔거
-
-    func fetchData(query: String, page: Int) {
-        let shared = KakaoAPIManager.shared
-        shared.fetchData(
-            type: .video,
-            query: query
-        ) { [weak self] (container) in
-            guard let container else {return}
-            self?.isEnd = container.meta.isEnd
-            self?.videoList += container.videoList
-        }
-    }
-
 }
 
 extension VideoViewController: UISearchBarDelegate {
@@ -109,6 +93,25 @@ extension VideoViewController: UITableViewDataSourcePrefetching {
                     page: page
                 )
             }
+        }
+    }
+
+}
+
+// Networking
+extension VideoViewController {
+
+    // invalidURL(url: "https://dapi.kakao.com/v2/search/vclip?query=수박")
+    // url에서 한글 처리를 해줘야함 앙ㄴ그러면 이렇게 댐
+    // 인섬니아는 알아서 처리를 해둔거
+    func fetchData(query: String, page: Int) {
+        KakaoAPIManager.shared.fetchData(
+            type: .video,
+            query: query
+        ) { [weak self] (container) in
+            guard let container else {return}
+            self?.isEnd = container.meta.isEnd
+            self?.videoList += container.videoList
         }
     }
 

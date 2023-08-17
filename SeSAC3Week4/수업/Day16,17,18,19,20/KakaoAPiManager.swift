@@ -6,7 +6,6 @@
 //
 
 import Alamofire
-import SwiftyJSON
 import Foundation
 
 final class KakaoAPIManager {
