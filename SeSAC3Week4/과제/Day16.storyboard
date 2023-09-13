@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Zxp-z4-XpZ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
@@ -80,31 +80,44 @@
                                     </label>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QNe-7j-rKZ">
+                                <rect key="frame" x="20" y="659" width="353" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="6X2-Yt-udh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <color key="textColor" systemColor="systemPinkColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBrownColor"/>
                         <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="QNe-7j-rKZ" secondAttribute="trailing" constant="20" id="AXg-n9-3hM"/>
                             <constraint firstItem="UmV-sZ-H0X" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="EB0-2l-iPy"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="UmV-sZ-H0X" secondAttribute="trailing" constant="16" id="Q7Q-0f-jaG"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="WLf-mK-b14" secondAttribute="trailing" constant="16" id="QEo-Gd-96A"/>
+                            <constraint firstItem="QNe-7j-rKZ" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="QHS-9t-Gdr"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="wmb-a2-YhD" secondAttribute="trailing" constant="16" id="aId-6U-ycp"/>
                             <constraint firstItem="wmb-a2-YhD" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="16" id="dKO-4O-Vqj"/>
                             <constraint firstItem="wmb-a2-YhD" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="fot-uK-QEJ"/>
                             <constraint firstItem="WLf-mK-b14" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="s4C-s0-vcz"/>
                             <constraint firstItem="UmV-sZ-H0X" firstAttribute="top" secondItem="wmb-a2-YhD" secondAttribute="bottom" constant="16" id="uO6-dM-orq"/>
                             <constraint firstItem="WLf-mK-b14" firstAttribute="top" secondItem="UmV-sZ-H0X" secondAttribute="bottom" constant="16" id="vyk-2z-HyX"/>
+                            <constraint firstItem="QNe-7j-rKZ" firstAttribute="top" secondItem="WLf-mK-b14" secondAttribute="bottom" constant="20" id="zje-qx-BNV"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="bnusLabel" destination="2Ma-co-x2W" id="aMK-J2-M4G"/>
+                        <outlet property="firstWinLabel" destination="QNe-7j-rKZ" id="fTe-GE-t28"/>
                         <outlet property="lotteryTextField" destination="wmb-a2-YhD" id="q3W-L1-A1d"/>
                         <outlet property="lotteryTurnLabel" destination="UmV-sZ-H0X" id="6NC-h7-fed"/>
-                        <outletCollection property="numberLabels" destination="q5c-B2-nTJ" collectionClass="NSMutableArray" id="YLu-7F-bAp"/>
-                        <outletCollection property="numberLabels" destination="3yn-I4-CpM" collectionClass="NSMutableArray" id="bnb-dm-GMg"/>
-                        <outletCollection property="numberLabels" destination="bSa-Pu-nUF" collectionClass="NSMutableArray" id="x5s-g8-yfV"/>
-                        <outletCollection property="numberLabels" destination="Dhg-eR-0aw" collectionClass="NSMutableArray" id="fEv-Mm-QYm"/>
-                        <outletCollection property="numberLabels" destination="KON-k9-CKa" collectionClass="NSMutableArray" id="RIv-cA-v7u"/>
-                        <outletCollection property="numberLabels" destination="j5A-6p-8Ya" collectionClass="NSMutableArray" id="hNd-4q-BXG"/>
-                        <outletCollection property="numberLabels" destination="2Ma-co-x2W" collectionClass="NSMutableArray" id="BDL-Gu-4sv"/>
+                        <outlet property="number1Label" destination="q5c-B2-nTJ" id="o1M-LR-cFX"/>
+                        <outlet property="number2Label" destination="3yn-I4-CpM" id="Fqz-MI-xRd"/>
+                        <outlet property="number3Label" destination="bSa-Pu-nUF" id="R1b-rl-tHa"/>
+                        <outlet property="number4Label" destination="Dhg-eR-0aw" id="jik-b6-FIs"/>
+                        <outlet property="number5Label" destination="KON-k9-CKa" id="LzK-MZ-Ljf"/>
+                        <outlet property="number6Label" destination="j5A-6p-8Ya" id="cGa-Bf-xDH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -198,6 +211,9 @@
         </systemColor>
         <systemColor name="systemOrangeColor">
             <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

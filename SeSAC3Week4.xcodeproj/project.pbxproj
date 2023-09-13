@@ -34,6 +34,10 @@
 		57D371BA2A825C85001A5029 /* BeerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D371B92A825C85001A5029 /* BeerViewController.swift */; };
 		57D371C22A832329001A5029 /* VideoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D371C12A832329001A5029 /* VideoTableViewCell.swift */; };
 		57DE2C852A8D00F80032C4CA /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DE2C842A8D00F80032C4CA /* Video.swift */; };
+		57EA23AE2AB1CD1700ABC911 /* LottoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57EA23AD2AB1CD1700ABC911 /* LottoViewModel.swift */; };
+		57EA23B02AB1CD2900ABC911 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57EA23AF2AB1CD2900ABC911 /* Observable.swift */; };
+		57EA23B22AB1CDDB00ABC911 /* Lotto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57EA23B12AB1CDDB00ABC911 /* Lotto.swift */; };
+		57EA23B42AB1D8C800ABC911 /* LottoAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57EA23B32AB1D8C800ABC911 /* LottoAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +68,10 @@
 		57D371C12A832329001A5029 /* VideoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoTableViewCell.swift; sourceTree = "<group>"; };
 		57D371D32A847BDD001A5029 /* FirstClassObject.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = FirstClassObject.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		57DE2C842A8D00F80032C4CA /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
+		57EA23AD2AB1CD1700ABC911 /* LottoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottoViewModel.swift; sourceTree = "<group>"; };
+		57EA23AF2AB1CD2900ABC911 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
+		57EA23B12AB1CDDB00ABC911 /* Lotto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lotto.swift; sourceTree = "<group>"; };
+		57EA23B32AB1D8C800ABC911 /* LottoAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottoAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,7 +140,9 @@
 		57D3719A2A809698001A5029 /* 과제 */ = {
 			isa = PBXGroup;
 			children = (
-				57D371B32A824586001A5029 /* Day16 */,
+				57D371B72A8245F7001A5029 /* Day16.storyboard */,
+				57D371B32A824586001A5029 /* Lotto */,
+				57EA23AC2AB1CCFF00ABC911 /* Beer */,
 				57D371B42A82458C001A5029 /* Day17 */,
 			);
 			name = "과제";
@@ -160,14 +170,16 @@
 			path = "Day16,17,18,19,20";
 			sourceTree = "<group>";
 		};
-		57D371B32A824586001A5029 /* Day16 */ = {
+		57D371B32A824586001A5029 /* Lotto */ = {
 			isa = PBXGroup;
 			children = (
-				57D371B72A8245F7001A5029 /* Day16.storyboard */,
+				57EA23B12AB1CDDB00ABC911 /* Lotto.swift */,
+				57EA23AD2AB1CD1700ABC911 /* LottoViewModel.swift */,
 				57D371B52A8245E5001A5029 /* LotteryViewController.swift */,
-				57D371B92A825C85001A5029 /* BeerViewController.swift */,
+				57EA23AF2AB1CD2900ABC911 /* Observable.swift */,
+				57EA23B32AB1D8C800ABC911 /* LottoAPI.swift */,
 			);
-			path = Day16;
+			path = Lotto;
 			sourceTree = "<group>";
 		};
 		57D371B42A82458C001A5029 /* Day17 */ = {
@@ -185,6 +197,14 @@
 				57DE2C842A8D00F80032C4CA /* Video.swift */,
 			);
 			path = Video;
+			sourceTree = "<group>";
+		};
+		57EA23AC2AB1CCFF00ABC911 /* Beer */ = {
+			isa = PBXGroup;
+			children = (
+				57D371B92A825C85001A5029 /* BeerViewController.swift */,
+			);
+			path = Beer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -275,10 +295,12 @@
 				57C653972A85C78500C792D2 /* KakaoAPIManager.swift in Sources */,
 				57D371BA2A825C85001A5029 /* BeerViewController.swift in Sources */,
 				57D371A72A809C2D001A5029 /* TranslationViewController.swift in Sources */,
+				57EA23AE2AB1CD1700ABC911 /* LottoViewModel.swift in Sources */,
 				57D371B12A81E7C9001A5029 /* VideoViewController.swift in Sources */,
 				57D371AF2A81C4DC001A5029 /* WeatherViewController.swift in Sources */,
 				57C653992A85E39000C792D2 /* TranslateAPIManager.swift in Sources */,
 				57D3718A2A809676001A5029 /* ViewController.swift in Sources */,
+				57EA23B02AB1CD2900ABC911 /* Observable.swift in Sources */,
 				57C653F22A8A031B00C792D2 /* BoxOffice.swift in Sources */,
 				57C653902A85BCFF00C792D2 /* UserDefaultsHelper.swift in Sources */,
 				57D371862A809676001A5029 /* AppDelegate.swift in Sources */,
@@ -286,7 +308,9 @@
 				57D371882A809676001A5029 /* SceneDelegate.swift in Sources */,
 				57D371A92A809C61001A5029 /* APIKey.swift in Sources */,
 				57DE2C852A8D00F80032C4CA /* Video.swift in Sources */,
+				57EA23B22AB1CDDB00ABC911 /* Lotto.swift in Sources */,
 				57C6538E2A85BAA200C792D2 /* ReusableViewProtocol.swift in Sources */,
+				57EA23B42AB1D8C800ABC911 /* LottoAPI.swift in Sources */,
 				57D371C22A832329001A5029 /* VideoTableViewCell.swift in Sources */,
 				57C6539B2A85F9ED00C792D2 /* AsyncViewController.swift in Sources */,
 			);
